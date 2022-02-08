@@ -25,18 +25,19 @@ jobs:
       
       - name: Sonar Scan
         uses: sonarsource/sonarqube-scan-action@master
-        args: >
-          -Dsonar.projectKey=node-ts-conventions
-          -Dsonar.projectVersion=1.0.0
-          -Dsonar.sourceEncoding=UTF-8
-          -Dsonar.links.scm=https://github.com/blink22/node-ts-conventions/
-          -Dsonar.sources=src
-          -Dsonar.tests=tests
-          -Dsonar.exclusions=**/tests/*.*
-          -Dsonar.test.inclusions=**/*.test.*
-          -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-          -Dsonar.testExecutionReportPaths=test-report.xml
-          -Dsonar.coverage.exclusions=**/*.spec.js,**/*.spec.ts,**/*.mock.js,**/*.mock.ts,node_modules/*,coverage/lcov-report/*
+        with:
+          args: >
+            -Dsonar.projectKey=node-ts-conventions
+            -Dsonar.projectVersion=1.0.0
+            -Dsonar.sourceEncoding=UTF-8
+            -Dsonar.links.scm=https://github.com/blink22/node-ts-conventions/
+            -Dsonar.sources=src
+            -Dsonar.tests=tests
+            -Dsonar.exclusions=**/tests/*.*
+            -Dsonar.test.inclusions=**/*.test.*
+            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+            -Dsonar.testExecutionReportPaths=test-report.xml
+            -Dsonar.coverage.exclusions=**/*.spec.js,**/*.spec.ts,**/*.mock.js,**/*.mock.ts,node_modules/*,coverage/lcov-report/*
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
