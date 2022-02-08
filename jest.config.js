@@ -8,9 +8,9 @@ module.exports = {
   moduleFileExtensions: ["js", "ts"],
   testResultsProcessor: "jest-sonar-reporter",
   transform: {
-    "^.+\\.ts$": "**/node_modules/ts-jest/preprocessor.js",
+    "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
   },
-  testMatch: ["**/tests/**/*.test.ts"],
+  testMatch: ["<rootDir>/tests/**/*.test.ts"],
   collectCoverage: true,
   coverageThreshold: {
     global: {
