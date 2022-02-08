@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.github
+dist
+.git
+.cache
+.idea
+static
+__data__
