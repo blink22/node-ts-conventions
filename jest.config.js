@@ -10,7 +10,7 @@ module.exports = {
   transform: {
     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
   },
-  testMatch: ["<rootDir>/tests/**/*.test.ts"],
+  testMatch: ["**/tests/**/*.test.ts"],
   collectCoverage: true,
   coverageThreshold: {
     global: {
