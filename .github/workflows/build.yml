@@ -19,7 +19,9 @@ jobs:
         run: npm install
       
       - name: Sonar Scan
-        run: SONAR_URL=${{ secrets.SONAR_HOST_URL }} SONAR_LOGIN=${{ secrets.SONAR_TOKEN }} npm run sonarqube
+        run: |
+          SONAR_URL=${{ secrets.SONAR_HOST_URL }} SONAR_LOGIN=${{ secrets.SONAR_TOKEN }} npm run sonarqube
+          ls .scannerwork
 
       # - name: Sonar Scan
       #   uses: sonarsource/sonarqube-scan-action@master
