@@ -16,12 +16,11 @@ jobs:
           node-version: '16'
       
       - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test
-      - run: ls
-      - run: cat test-report.xml
+        run: |
+          npm install
+          npm test
+          ls
+          cat test-report.xml
       
       - name: Sonar Scan
         uses: sonarsource/sonarqube-scan-action@master
