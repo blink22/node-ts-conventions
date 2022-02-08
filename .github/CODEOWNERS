@@ -5,7 +5,7 @@
 # the repo. Unless a later match takes precedence,
 # and will be requested for review when
 # anyone opens a pull request.
-<!-- *       @ashrafhofney -->
+*       @ashrafhofney
 
 *.ts    @ashrafhofney
 
