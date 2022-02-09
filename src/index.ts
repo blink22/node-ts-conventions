@@ -1,5 +1,6 @@
 export function fibonacci(num: number): number | null {
   if (num < 0) {
+    console.log(`Error: the number ${num} is a negative value`);
     return null;
   }
 
@@ -13,6 +14,6 @@ export function fibonacci(num: number): number | null {
     num--;
   }
 
+  console.log(`return value is ${b}`);
   return b;
 }
-console.log("Hello");
