@@ -15,6 +15,9 @@ describe("fibonacci ", () => {
 
   it("should return null for -1", () => {
     expect(fibonacci(-1)).toBe(null);
-    expect(consoleLogSpy).toHaveBeenCalledTimes(0);
+    expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+    expect(consoleLogSpy).toHaveBeenCalledWith(
+      "Error: the number -1 is a negative value"
+    );
   });
 });
