@@ -13,5 +13,6 @@ export function fibonacci(num: number): number | null {
     num--;
   }
 
+  console.log(`return value is ${b}`);
   return b;
 }
